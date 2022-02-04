@@ -1,0 +1,55 @@
+DataObject structure
+--
+allows access array as $array->$key as value
+
+SERVICE::DEBUG($this->params->toArray());	//returns as array
+$this->params->dump();	//prints all content
+
+
+JSCONST functıon
+---
+allows you to define array, variable or class (auto-converted into json)
+PROTON::JSCONST("language", $r);
+---
+TEXT::FORMAT
+allows you to format text
+
+1) TEXT::FORMAT("string {1},{ab}, {ac}", "x","y","z")
+
+2) TEXT::FORMAT("string {1},{ab}, {ac}", ["1" => "x", "ab" => "y", "ac" => "z"]);
+
+
+/*
+        $query = new XQuery();
+        $query->select('users',['id','name'])->where("id < 3");
+        echo $query->toString();
+        echo "<br>";
+        $result =  $query->fetch();
+
+        echo $query->count();
+
+        print_r( $result);
+
+        
+        $query = new XQuery();
+        $query->update('users',['id' => '2','name' =>'umit'])->where("id < 3");
+        echo $query->toString();
+        echo "<br>";
+
+        $query = new XQuery();
+        $query->delete('users')->where("id < 3");
+        echo $query->toString();
+        echo "<br>";
+
+        $query = new XQuery();
+        $query->insert('users', ['mail' => 'uaksoylu@gmail.com', 'name' => 'farzad']);
+        echo $query->toString();
+        echo "<br>";
+        
+
+
+        $query = new XQuery();
+        $query->select('users',['id','name'])->join('LEFT', "wallets", "users.walletid = wallets.id")->orderByDESC("name")->limit(3);
+        echo $query->toString();
+        */
+
